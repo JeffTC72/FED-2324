@@ -75,11 +75,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### de hele pagina: 
   <img src="_readme-files/google-store-breakdown.jpg" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="_readme-files/google-store-product-breakdown.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="_readme-files/google-store-filters-breakdown.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+
+  ### tweede pagina: 
+  <img src="_readme-files/google-store-product-breakdown.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
