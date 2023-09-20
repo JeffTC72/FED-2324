@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Jesse Holwarda
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Responsive
  
 </details>
 
@@ -36,15 +36,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  [store.google.com](https://store.google.com/?hl=nl)
+  Dit is de webwinkel van Google waar je hun producten zoals de Pixel telefoons of de smarthome producten kan kopen. De tweede pagina die ik uitwerk is de product pagine van de [Pixel 7](https://store.google.com/product/pixel_7?hl=nl).
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Google Store voor Google- apparaten en -accessoires.  
+  <img src="_readme-files/google-store-long.png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Google Pixel 7 - Google Store  
+  <img src="_readme-files/google-store-product-long.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -57,6 +58,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - Toetsenbord navigatie is prima te doen
+  - Narrator is geen touw aan vast te knopen
+  - Contrast is veel zwart op wit, dus goed, maar er zijn geen andere opties
+  -
 
 </details>
 
