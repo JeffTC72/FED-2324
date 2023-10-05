@@ -55,8 +55,30 @@ header button:nth-of-type(1) img, header a:nth-of-type(2) img{
 
 footer{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
-footer > img{
-	width:1.8em;
+
+footer h2{
+	position: relative;
+	flex-basis: 100%;
+}
+footer h2::before {
+	position: absolute;
+	left: -1em;
+	top: 50%; /* Adjust vertical alignment as needed */
+	transform: translateY(-50%); /* Center vertically */
+	z-index: 100;
+
+	content: '';
+	background-image: url('/assets/images/Google-logo.png');
+	background-size: cover; /* Adjust to fit the desired size */
+	
+	width: 1.8em;
+	height: 1.8em; /* Set a fixed height to maintain aspect ratio */
+} /* **PROBLEEM OPGELOST MET CHATGPT** */
+
+footer ul{
+	display: flex;
+	flex-direction: column;
 }
