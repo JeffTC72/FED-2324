@@ -132,19 +132,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Sten Kotten               | Edward van Vliet            | Melvin Kramer  | Jesse Holwarda   |
-  | ---                       | ---                         | ---            | ---              |
-  | afbeelding bestandstypen  | afbeeldingen die niet laden | en ik dit      | tekst dropdown   |
-  | croppen, schalen en lagen | specifiek font selecteren   | nog een punt   | dit wil ik zeker |
-  | css selector              | css check                   | ...            | ...              |
+  | Sten Kotten               | Edward van Vliet            | Melvin Kramer            | Jesse Holwarda   |
+  | ---                       | ---                         | ---                      | ---              |
+  | afbeelding bestandstypen  | afbeeldingen die niet laden | tekst binnen carrousel   | tekst dropdown   |
+  | croppen, schalen en lagen | specifiek font selecteren   | content up-to-date?      | ...              |
+  | css selector              | css check                   | ...                      | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Problemen waren gefixt
+  - content hoeft niet up-to-date
+  - ik moet aan de slag
 - ...
 
 </details>

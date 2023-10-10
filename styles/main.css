@@ -11,6 +11,9 @@ button{
 ul,ol{
 	list-style: none;
 }
+img{
+	max-width: 100%;
+}
 
 
 
@@ -47,7 +50,8 @@ header a:first-of-type{
 header img{
 	width: 1.8em;
 }
-header button:nth-of-type(1) img, header a:nth-of-type(2) img{
+header button:nth-of-type(1) img,
+header a:nth-of-type(2) img{
 	width: 1.5em;
 }
 
