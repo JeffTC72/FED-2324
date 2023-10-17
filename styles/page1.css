@@ -1,0 +1,83 @@
+h1{
+    font-weight: 700;
+    color: var(--main-text-color);
+
+    text-align: center;
+}
+h1 em{
+    color:var(--h1-text-deco);
+    display: block;
+    font-style: normal;
+}
+
+
+
+
+
+
+main > section:first-of-type{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+main > section:first-of-type > section{
+    /*************************/
+    /******* TEMPORARY *******/
+    /*************************/
+
+    display: none;
+}
+
+
+
+
+
+
+main > section:first-of-type > ul{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 1em;
+
+    padding-inline-start: 0;
+}
+main > section:first-of-type > ul li{
+    background-color: orange;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+main > section:first-of-type > ul li h3{
+    font-weight: 500;
+}
+main > section:first-of-type > ul li h4{
+    color: var(--alt-text-color);
+
+    font-weight: 300;
+}
+
+main > section:first-of-type > ul li section{
+    background-color: var(--alt-bg-color);
+
+    order: -1;
+
+    width: 100%;
+    aspect-ratio: 3/4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > section:first-of-type > ul li img{
+    width: 80%;
+    transition-duration: .4s;
+}
+main > section:first-of-type > ul li img:hover{
+    scale: 1.1;
+}
