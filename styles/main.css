@@ -3,6 +3,7 @@
 /**************/
 *, *::after, *::before {
 	box-sizing:border-box; 
+	margin: 0;
 }
 
 button{
@@ -123,6 +124,8 @@ img{
 h1, h2, h3, h4, p, a{
 	font-family: var(--main-fonts);
 	color: var(--main-text-color);
+
+	
 }
 
 header{

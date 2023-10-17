@@ -1,6 +1,6 @@
 h1{
-    font-weight: 700;
     color: var(--main-text-color);
+    font-weight: 700;
 
     text-align: center;
 }
@@ -42,24 +42,25 @@ main > section:first-of-type > section{
 main > section:first-of-type > ul{
     display: grid;
     grid-template-columns:1fr 1fr;
-    gap: 1em;
+    gap: 3em 1em;
 
     padding-inline-start: 0;
 }
-main > section:first-of-type > ul li{
-    background-color: orange;
-    
+main > section:first-of-type > ul li{    
     display: flex;
     flex-direction: column;
 }
 
 main > section:first-of-type > ul li h3{
     font-weight: 500;
+    font-size: 1em;
+    line-height: 3em;
 }
 main > section:first-of-type > ul li h4{
     color: var(--alt-text-color);
 
     font-weight: 300;
+    font-size: 1.2em;
 }
 
 main > section:first-of-type > ul li section{
