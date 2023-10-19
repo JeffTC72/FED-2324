@@ -179,11 +179,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Sten Kotten                   | Edward van Vliet                   | Melvin Kramer            | Jesse Holwarda   |
+  | ---                           | ---                                | ---                      | ---              |
+  | logo centreren binnen button  | vraag over states                  | class voor een link      | text dropdown    |
+  | defecte menu items            | ook defecte menu items             | id voor een video speler | jatten van svg's |
+  | problemen met gradient        | decoratie van de originele website | schalen van afbeeldingen | ...              |
+  | diverse lelijkheidjes         | ...                                | ...                      | ...              |
 
 
   ### Verslag van meeting

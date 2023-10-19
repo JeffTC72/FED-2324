@@ -4,6 +4,7 @@
 *, *::after, *::before {
 	box-sizing:border-box; 
 	margin: 0;
+	padding: 0;
 }
 
 button{
@@ -60,7 +61,7 @@ img{
 @font-face {
 	font-family: 'Product Sans';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 900;
 	src: local('Product Sans Black Regular'), url('../assets/fonts/ProductSans-Black.woff') format('woff');
 }
   
@@ -88,14 +89,14 @@ img{
 @font-face {
 	font-family: 'Product Sans';
 	font-style: normal;
-	font-weight: 900;
+	font-weight: 700;
 	src: local('Product Sans Bold'), url('../assets/fonts/ProductSans-Bold.woff') format('woff');
 }
   
 @font-face {
 	font-family: 'Product Sans';
 	font-style: italic;
-	font-weight: 700;
+	font-weight: 900;
 	src: local('Product Sans Black Italic'), url('../assets/fonts/ProductSans-BlackItalic.woff') format('woff');
 }  
 
@@ -110,6 +111,9 @@ img{
 	--main-bg-color:#eee;
 	--alt-bg-color:#f8f9fa;
 
+	--footer-icon-fill:#423f3f;
+	--line-color:#f2f2f2;
+
 	--main-fonts:Product Sans, Roboto, Arial, sans-serif;
 }
 
@@ -117,15 +121,17 @@ img{
 
 
 
-/****************/
-/* STYLING */
-/****************/
+/*****************/
+/**** STYLING ****/
+/*****************/
+
+/***** HEADER *****/
 
 h1, h2, h3, h4, p, a{
 	font-family: var(--main-fonts);
 	color: var(--main-text-color);
 
-	
+	text-decoration: none;
 }
 
 header{
@@ -150,20 +156,32 @@ header a:nth-of-type(2) img{
 }
 
 
+/***** FOOTER *****/
 
 footer{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 }
-
+footer h2,
+footer h3,
+footer h4,
+footer p,
+footer a{
+	color: var(--alt-text-color);
+}
 footer h2{
+	font-size: 1.2em;
+	font-weight: 500;
+	line-height: 5em;
+
 	position: relative;
+	left: 2.5em;
 	flex-basis: 100%;
 }
 footer h2::before {
 	position: absolute;
-	left: -1em;
+	left: -1.6em;
 	top: 50%; /* Adjust vertical alignment as needed */
 	transform: translateY(-50%); /* Center vertically */
 	z-index: 100;
@@ -172,17 +190,51 @@ footer h2::before {
 	background-image: url('/assets/images/Google-logo.png');
 	background-size: cover; /* Adjust to fit the desired size */
 	
-	width: 1.8em;
-	height: 1.8em; /* Set a fixed height to maintain aspect ratio */
+	width: 1.5em;
+	height: 1.5em; /* Set a fixed height to maintain aspect ratio */
 } /* **PROBLEEM OPGELOST MET CHATGPT** */
 
-footer ul,
-footer > section:first-of-type{
+
+
+footer > ul,
+footer > section:last-of-type{
 	display: flex;
 	flex-direction: column;
+	gap: 2em;
+}
+footer > ul li{
+	position: relative;
+	left: 1.5em;
+
+	width: 35%;
+}
+footer > ul li h3{
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.5em;
 }
 
-footer > section:first-of-type > ul{
-	display: flex;
-	flex-direction: row;
+
+
+footer > section:last-of-type{
+	position: relative;
+	left: 1.5em;
+	right: 1.5em;
+
+	border-top: 1px solid var(--line-color);
 }
+footer > section:last-of-type > ul{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 1em;
+
+	height: 5em;
+}
+footer > section:last-of-type > ul img{
+	width: 1.2em;
+}
+
+
+
+/*fix dupes*/
