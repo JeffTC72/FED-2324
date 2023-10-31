@@ -237,4 +237,30 @@ footer > section:last-of-type > ul img{
 
 
 
-/*fix dupes*/
+footer > section:last-of-type > section:last-of-type{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1em 2em;
+
+	width: 65%;
+}
+footer > section:last-of-type > section:last-of-type > a:first-of-type{
+	position: relative;
+	left: 2em;
+}
+footer > section:last-of-type > section:last-of-type > a:first-of-type::before {
+	position: absolute;
+	left: -2em;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+
+	content: '';
+	background-image: url('/assets/images/icons/netherlands.png');
+	border-radius: .1em;
+	background-size: cover;
+	
+	width: 1.5em;
+	height: 1.2em;
+}
