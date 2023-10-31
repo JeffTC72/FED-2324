@@ -29,21 +29,33 @@ h1 em{
 main > section:nth-of-type(2){
     display: flex;
     flex-direction: column;
+    gap: 1em;
+}
+main > section:nth-of-type(2) > h2{
+    position: absolute;
+    left: -999em;
+    top: -999em;
+}
+
+
+main > section:nth-of-type(2) > section:first-of-type{
+    flex-basis: 100%;
+
+    background-color: var(--alt-bg-color);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 5em;
+}
+main > section:nth-of-type(2) > section:first-of-type > button > img{
+    width: 1em;
 }
 
 
 
-
-
-
-
-main > section:nth-of-type(2) > section{
-    /*************************/
-    /******* TEMPORARY *******/
-    /*************************/
-
-    display: none;
-}
 
 
 
@@ -56,6 +68,7 @@ main > section:nth-of-type(2) > ul{
     gap: 3em 1em;
 
     padding-inline-start: 0;
+    padding: 0 1em 0 1em;
 }
 main > section:nth-of-type(2) > ul li{    
     display: flex;
@@ -92,4 +105,36 @@ main > section:nth-of-type(2) > ul li img{
 }
 main > section:nth-of-type(2) > ul li img:hover{
     scale: 1.1;
+}
+
+
+
+
+main > section:nth-of-type(2) > section:last-of-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    height: 10em;
+}
+main > section:nth-of-type(2) > section:last-of-type button img{
+    width: 1em;
+    flex-grow: 5;
+}
+main > section:nth-of-type(2) > section:last-of-type button:first-of-type img{
+    rotate: 90deg;
+}
+main > section:nth-of-type(2) > section:last-of-type button:last-of-type img{
+    rotate: -90deg;
+}
+main > section:nth-of-type(2) > section:last-of-type button:not(
+main > section:nth-of-type(2) > section:last-of-type button:first-of-type,
+main > section:nth-of-type(2) > section:last-of-type button:last-of-type){
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    background-color: var(--alt-bg-color);
+    border-radius: 50%;
 }

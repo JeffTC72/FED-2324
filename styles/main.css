@@ -5,6 +5,7 @@
 	box-sizing:border-box; 
 	margin: 0;
 	padding: 0;
+	/* border:solid 1px darkorange; */
 }
 
 button{
@@ -162,6 +163,9 @@ footer{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+
+	padding: 0 1em 2em 1em;
+	
 }
 footer h2,
 footer h3,
@@ -175,17 +179,12 @@ footer h2{
 	font-weight: 500;
 	line-height: 5em;
 
-	position: relative;
-	left: 2.5em;
+	display: flex;
+	align-items: center;
+	gap: 1em;
 	flex-basis: 100%;
 }
 footer h2::before {
-	position: absolute;
-	left: -1.6em;
-	top: 50%; /* Adjust vertical alignment as needed */
-	transform: translateY(-50%); /* Center vertically */
-	z-index: 100;
-
 	content: '';
 	background-image: url('/assets/images/Google-logo.png');
 	background-size: cover; /* Adjust to fit the desired size */
@@ -203,8 +202,6 @@ footer > section:last-of-type{
 	gap: 2em;
 }
 footer > ul li{
-	position: relative;
-	left: 1.5em;
 
 	width: 35%;
 }
@@ -217,9 +214,6 @@ footer > ul li h3{
 
 
 footer > section:last-of-type{
-	position: relative;
-	left: 1.5em;
-	right: 1.5em;
 
 	border-top: 1px solid var(--line-color);
 }
@@ -243,19 +237,14 @@ footer > section:last-of-type > section:last-of-type{
 	flex-wrap: wrap;
 	gap: 1em 2em;
 
-	width: 65%;
+	width: 75%;
 }
 footer > section:last-of-type > section:last-of-type > a:first-of-type{
-	position: relative;
-	left: 2em;
+	display: flex;
+	align-items: center;
+	gap: 1em;
 }
 footer > section:last-of-type > section:last-of-type > a:first-of-type::before {
-	position: absolute;
-	left: -2em;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 100;
-
 	content: '';
 	background-image: url('/assets/images/icons/netherlands.png');
 	border-radius: .1em;
