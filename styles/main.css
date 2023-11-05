@@ -109,7 +109,7 @@ img{
 	--alt-text-color:#636060;
 	--h1-text-deco:#188038;
 
-	--main-bg-color:#eee;
+	--main-bg-color:#fff;
 	--alt-bg-color:#f8f9fa;
 
 	--footer-icon-fill:#423f3f;
@@ -128,7 +128,7 @@ img{
 
 /***** HEADER *****/
 
-h1, h2, h3, h4, p, a{
+h1, h2, h3, h4, p, a, label, button{
 	font-family: var(--main-fonts);
 	color: var(--main-text-color);
 
@@ -141,7 +141,7 @@ header{
 	align-items: center;
 
 	gap: .5em;
-	padding: .5em;
+	padding: 1em;
 }
 
 header a:first-of-type{
@@ -151,13 +151,17 @@ header a:first-of-type{
 header img{
 	width: 1.8em;
 }
+header button{
+	cursor: pointer;
+}
 header button:nth-of-type(1) img,
 header a:nth-of-type(2) img{
 	width: 1.5em;
 }
 
 
-/***** FOOTER *****/
+
+/***** FOOTER - basics and title *****/
 
 footer{
 	display: flex;
@@ -193,7 +197,19 @@ footer h2::before {
 	height: 1.5em; /* Set a fixed height to maintain aspect ratio */
 } /* **PROBLEEM OPGELOST MET CHATGPT** */
 
+@media screen and (min-width: 48em) {
+	footer{
+		padding: 0 2em 2em 2em;
+	}
+	footer h2{
+		position: absolute;
+		left: -999em;
+		top: -999em;
+	}
+}
 
+
+/***** FOOTER - links *****/
 
 footer > ul,
 footer > section:last-of-type{
@@ -210,8 +226,22 @@ footer > ul li h3{
 	font-weight: 400;
 	line-height: 1.5em;
 }
+@media screen and (min-width: 48em) {
+	footer > ul{
+		align-self: flex-end;
+		flex-wrap: wrap;
+		gap: 1.5em;
+		width: 25em;
+		height: 40em;
+		padding: 2em;
+	}
+	footer > ul h3{
+		font-size: .8em;
+	}
+}
 
 
+/***** FOOTER - socials and data *****/
 
 footer > section:last-of-type{
 
@@ -252,4 +282,26 @@ footer > section:last-of-type > section:last-of-type > a:first-of-type::before {
 	
 	width: 1.5em;
 	height: 1.2em;
+}
+@media screen and (min-width: 48em) {
+	footer > section:last-of-type > ul{
+		height: 3em;
+	}
+	footer > section:last-of-type > section:last-of-type{
+		width: 100%;
+		gap: 1em;
+	}
+	footer > section:last-of-type > section:last-of-type a{
+		font-size: .75em;
+	}
+}
+@media screen and (min-width: 64em) {
+	footer > section:last-of-type{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	footer > section:last-of-type > section:last-of-type{
+		width: auto;
+	}
 }

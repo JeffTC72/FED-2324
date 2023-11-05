@@ -1,11 +1,18 @@
 
 
+/***** TITLE *****/
+
 main > section:first-of-type{
+background-color: var(--main-bg-color);
+
     display: flex;
     justify-content: center;
     align-items: center;
 
     height: 10em;
+
+    position: relative;
+    z-index: 200;
 }
 
 h1{
@@ -24,19 +31,34 @@ h1 em{
 
 
 
-
+/***** STORE *****/
 
 main > section:nth-of-type(2){
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+
     gap: 1em;
+
+    position: relative;
 }
+@media screen and (min-width: 48em) {
+    main > section:nth-of-type(2){
+        grid-template-columns: 16em 1fr;
+        grid-template-rows: 1em 1fr 10em;
+    }
+}
+
+
+/***** HIDDEN H2 *****/
+
 main > section:nth-of-type(2) > h2{
     position: absolute;
     left: -999em;
     top: -999em;
 }
 
+
+/***** FILTERS - dropdown *****/
 
 main > section:nth-of-type(2) > section:first-of-type{
     flex-basis: 100%;
@@ -47,20 +69,98 @@ main > section:nth-of-type(2) > section:first-of-type{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: .6em;
+
+    position: relative;
+    z-index: 100;
 
     line-height: 5em;
 }
 main > section:nth-of-type(2) > section:first-of-type > button > img{
-    width: 1em;
+    width: .8em;
+    transition: 0.2s;
+}
+main > section:nth-of-type(2) > section:first-of-type > button.filterActive > img{
+    rotate: 180deg;
+}
+@media screen and (min-width: 48em) {
+    main > section:nth-of-type(2) > section:first-of-type{
+        background-color: var(--main-bg-color);
+        line-height: unset;
+        padding: 1.2em;
+
+        justify-content: flex-start;
+    }
+    main > section:nth-of-type(2) > section:first-of-type > h3{
+        color: var(--alt-text-color);
+        font-weight: 400;
+        font-size: .8em;
+    }
+    main > section:nth-of-type(2) > section:first-of-type > button{
+        display: none;
+    }
 }
 
 
+/***** FILTERS- menu *****/
+
+main > section:nth-of-type(2) > section:nth-of-type(2){
+    width: 100%;
+
+    background-color: var(--main-bg-color);
+    padding: 2em 1em;
+
+    position: absolute;
+    z-index: 50;
+    top: -10em;
+
+    transition: 0.5s;
+}
+main > section:nth-of-type(2) > section:nth-of-type(2).filterOpen{
+    transform: translateY(90%);
+    
+    
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(2) > form{
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    gap: 1em;
+
+    line-height: 1em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(2) > form > section:last-of-type{
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+    padding: 1em;
+}
+main > section:nth-of-type(2) > section:nth-of-type(2) > form > section:last-of-type > input:last-of-type{
+    font-family: var(--main-fonts);
+	color: var(--main-text-color);
+	text-decoration: none;
+
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--main-text-color);
+    border-radius: .25em;
+
+    width: 6em;
+    height: 2.5em;
+}
+@media screen and (min-width: 48em) {
+    main > section:nth-of-type(2) > section:nth-of-type(2){
+        position: relative;
+        top: unset;
+    }
+    main > section:nth-of-type(2) > section:nth-of-type(2).filterOpen{
+        transform: unset;
+    }
+}
 
 
-
-
-
-
+/***** ITEM LIST *****/
 
 main > section:nth-of-type(2) > ul{
     display: grid;
@@ -69,6 +169,7 @@ main > section:nth-of-type(2) > ul{
 
     padding-inline-start: 0;
     padding: 0 1em 0 1em;
+
 }
 main > section:nth-of-type(2) > ul li{    
     display: flex;
@@ -107,8 +208,23 @@ main > section:nth-of-type(2) > ul li img:hover{
     scale: 1.1;
 }
 
+@media screen and (min-width: 48em) {
+    main > section:nth-of-type(2) > ul{
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
+@media screen and (min-width: 64em) {
+    main > section:nth-of-type(2) > ul{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+}
 
 
+/***** PAGE BUTTONS *****/
 
 main > section:nth-of-type(2) > section:last-of-type{
     display: flex;
@@ -118,6 +234,9 @@ main > section:nth-of-type(2) > section:last-of-type{
     gap: 1em;
 
     height: 10em;
+}
+main > section:nth-of-type(2) > section:last-of-type button{
+    cursor: pointer;
 }
 main > section:nth-of-type(2) > section:last-of-type button img{
     width: 1em;
@@ -135,6 +254,19 @@ main > section:nth-of-type(2) > section:last-of-type button:last-of-type){
     width: 1.5em;
     height: 1.5em;
     text-align: center;
-    background-color: var(--alt-bg-color);
     border-radius: 50%;
+}
+main > section:nth-of-type(2) > section:last-of-type button img.pageButtonActive{
+    filter: contrast(0%);
+    cursor: auto;
+}
+main > section:nth-of-type(2) > section:last-of-type button.pageActive{
+    background-color: var(--alt-bg-color);
+    cursor: auto;
+}
+@media screen and (min-width: 48em) {
+    main > section:nth-of-type(2) > section:last-of-type{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
 }
