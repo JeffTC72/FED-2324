@@ -108,12 +108,18 @@ img{
 	--main-text-color:#3C4043;
 	--alt-text-color:#636060;
 	--h1-text-deco:#188038;
+	--main-link-color:#2962ff;
 
 	--main-bg-color:#fff;
 	--alt-bg-color:#f8f9fa;
 
 	--footer-icon-fill:#423f3f;
 	--line-color:#f2f2f2;
+	--button-color:#1967d2;
+
+	--lemongrass:#f5fce4;
+	--snow:#dadce0;
+	--obsidian:#252525;
 
 	--main-fonts:Product Sans, Roboto, Arial, sans-serif;
 }
