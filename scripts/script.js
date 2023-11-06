@@ -11,8 +11,6 @@ const pageButton3 = document.querySelector("main > section:nth-of-type(2) > sect
 const pageButtonNext = document.querySelector("main > section:nth-of-type(2) > section:last-of-type button:last-of-type img");
 
 
-
-
 filtersButton.addEventListener('click', () => {
     filtersMenu.classList.toggle("filterOpen");
     filtersButton.classList.toggle("filterActive");

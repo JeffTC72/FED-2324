@@ -1,5 +1,7 @@
 
-
+main{
+    background-color: var(--main-bg-color);
+}
 /***** TITLE *****/
 
 main > section:first-of-type{
@@ -171,7 +173,7 @@ main > section:nth-of-type(2) > ul{
     padding: 0 1em 0 1em;
 
 }
-main > section:nth-of-type(2) > ul li{    
+main > section:nth-of-type(2) > ul li a{    
     display: flex;
     flex-direction: column;
 }
@@ -188,7 +190,7 @@ main > section:nth-of-type(2) > ul li h4{
     font-size: 1.2em;
 }
 
-main > section:nth-of-type(2) > ul li section{
+main > section:nth-of-type(2) > ul li a section{
     background-color: var(--alt-bg-color);
 
     order: -1;
@@ -204,9 +206,13 @@ main > section:nth-of-type(2) > ul li img{
     width: 80%;
     transition-duration: .4s;
 }
-main > section:nth-of-type(2) > ul li img:hover{
-    scale: 1.1;
+
+@media (prefers-reduced-motion: no-preference){
+    main > section:nth-of-type(2) > ul li img:hover{
+        scale: 1.1;
+    }
 }
+
 
 @media screen and (min-width: 48em) {
     main > section:nth-of-type(2) > ul{
@@ -241,6 +247,8 @@ main > section:nth-of-type(2) > section:last-of-type button{
 main > section:nth-of-type(2) > section:last-of-type button img{
     width: 1em;
     flex-grow: 5;
+
+    filter: contrast(40%);
 }
 main > section:nth-of-type(2) > section:last-of-type button:first-of-type img{
     rotate: 90deg;
@@ -268,5 +276,13 @@ main > section:nth-of-type(2) > section:last-of-type button.pageActive{
     main > section:nth-of-type(2) > section:last-of-type{
         grid-column-start: 2;
         grid-column-end: 3;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    main > section:nth-of-type(2) > section:last-of-type button img{
+        filter: contrast(0%);
+    }
+    main > section:nth-of-type(2) > section:last-of-type button img.pageButtonActive{
+        filter: contrast(40%);
     }
 }

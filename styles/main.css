@@ -113,7 +113,6 @@ img{
 	--main-bg-color:#fff;
 	--alt-bg-color:#f8f9fa;
 
-	--footer-icon-fill:#423f3f;
 	--line-color:#f2f2f2;
 	--button-color:#1967d2;
 
@@ -123,16 +122,48 @@ img{
 
 	--main-fonts:Product Sans, Roboto, Arial, sans-serif;
 }
+@media (prefers-color-scheme: dark) {
+	:root {
+		--main-text-color:#c3bfbc;
+		--alt-text-color:#9c9f9f;
+		--h1-text-deco:#de5246;
+		--main-link-color:#2962ff;
+	
+		--main-bg-color:#000;
+		--alt-bg-color:#070605;
+	
+		--line-color:#0d0d0d;
+		--button-color:#1967d2;
+	
+		--lemongrass:#f5fce4;
+		--snow:#dadce0;
+		--obsidian:#252525;
+	}
+}
 
-
-
-
+*:focus{
+	border: 1px solid var(--main-link-color);
+}
 
 /*****************/
 /**** STYLING ****/
 /*****************/
 
 /***** HEADER *****/
+
+body > a{
+	background-color: var(--alt-bg-color);
+	height: 2em;
+	padding: .5em;
+	left: 50%;
+	position: absolute;
+	translate: -50% 0;
+	transform: translateY(-100%);
+	transition: transform 0.3s;
+}
+body > a:focus{
+	transform: translateY(0%);
+}
 
 h1, h2, h3, h4, p, a, label, button{
 	font-family: var(--main-fonts);
@@ -148,6 +179,8 @@ header{
 
 	gap: .5em;
 	padding: 1em;
+
+	background-color: var(--main-bg-color);
 }
 
 header a:first-of-type{
@@ -156,6 +189,9 @@ header a:first-of-type{
 
 header img{
 	width: 1.8em;
+}
+header img:not(header > a:first-of-type > img) {
+	filter: contrast(40%);
 }
 header button{
 	cursor: pointer;
@@ -175,7 +211,7 @@ footer{
 	flex-wrap: wrap;
 
 	padding: 0 1em 2em 1em;
-	
+	background-color: var(--main-bg-color);
 }
 footer h2,
 footer h3,
@@ -263,6 +299,7 @@ footer > section:last-of-type > ul{
 }
 footer > section:last-of-type > ul img{
 	width: 1.2em;
+	filter: contrast(40%);
 }
 
 

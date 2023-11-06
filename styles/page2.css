@@ -1,5 +1,7 @@
 
-
+main{
+    background-color: var(--main-bg-color);
+}
 /***** BACK BUTTON *****/
 
 main > section:first-of-type{
@@ -114,16 +116,30 @@ main > section:nth-of-type(2)> section:nth-of-type(3) section:nth-of-type(2) > b
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 main > section:nth-of-type(2)> section:nth-of-type(3) section:first-of-type > button{
     height: 6em;
     width: 32%;
+}
+main > section:nth-of-type(2)> section:nth-of-type(3) section:first-of-type > button.selected{
+    border: 2px solid var(--button-color);
 }
 main > section:nth-of-type(2)> section:nth-of-type(3) section:nth-of-type(2) > button{
     height: 5em;
     width: 49%;
 
     flex-direction: column;
+}
+main > section:nth-of-type(2)> section:nth-of-type(3) section:nth-of-type(2) > button.selected{
+    border: 2px solid var(--button-color);
+}
+main > section:nth-of-type(2)> section:nth-of-type(3) section:nth-of-type(2) > button.disabled{
+    border: 1px solid var(--line-color);
+    cursor: unset;
+}
+main > section:nth-of-type(2)> section:nth-of-type(3) section:nth-of-type(2) > button.disabled p{
+    color: var(--line-color);
 }
 main > section:nth-of-type(2)> section:nth-of-type(3) section:nth-of-type(2) > button p:first-of-type{
     font-size: 1em;
@@ -207,6 +223,12 @@ main > section:nth-of-type(2)> section:nth-of-type(3) section:last-of-type > but
     color: var(--main-bg-color);
     font-size: 1em;
     font-weight: 500;
+
+    cursor: pointer;
+}
+main > section:nth-of-type(2)> section:nth-of-type(3) section:last-of-type > button.disabled{
+    background-color: var(--line-color);
+    cursor: unset;
 }
 main > section:nth-of-type(2)> section:nth-of-type(3) section:last-of-type > section{
     display: flex;
